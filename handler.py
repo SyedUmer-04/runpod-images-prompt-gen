@@ -4,12 +4,27 @@ import os
 
 MODEL_PATH = os.getenv("MODEL_PATH", "/model-cache")
 
-pipe = pipeline(
-    "text-generation",
-    model=MODEL_PATH,
-    torch_dtype="float16",
-    device_map="auto",
-)
+# DEBUG — print exactly what's in /model-cache at startup
+print(f"[Startup] Contents of /model-cache:")
+try:
+    for item in os.listdir("/model-cache"):
+        print(f"  - {item}")
+except Exception as e:
+    print(f"  ERROR reading /model-cache: {e}")
+
+print(f"[Startup] Loading model from: {MODEL_PATH}")
+
+try:
+    pipe = pipeline(
+        "text-generation",
+        model=MODEL_PATH,
+        torch_dtype="float16",
+        device_map="auto",
+    )
+    print("[Startup] ✅ Model loaded successfully!")
+except Exception as e:
+    print(f"[Startup] ❌ Model load failed: {e}")
+    raise  # This will show the exact error in logs
 
 def handler(job):
     job_input = job["input"]
