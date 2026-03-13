@@ -16,7 +16,6 @@ def handler(job):
     word = job_input["word"]
     category = job_input["category"]
     country = job_input["country"]
-    countryContext = job_input["countryContext"]
 
     prompt_text = (
         f"<s>[INST] "
@@ -26,7 +25,7 @@ def handler(job):
         f"be immediately recognizable and guessable by a child at first glance. "
         f"Use the following country context to ensure every visual detail — appearance, "
         f"colour, style, shape, and form — is accurate to how this word genuinely looks "
-        f"and exists in that country"
+        f"and exists in that country Don't overdo flags, patterns and colors - only where necessary, everyday items and common product might not need Pakistani colors or design, only things that are specific to Pkaistan need them, "
         f"The prompt must follow these rules: "
         f"- Pure white background, subject isolated cleanly with no scene or environment. "
         f"- Single focused subject only, no clutter. "
