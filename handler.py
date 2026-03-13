@@ -26,7 +26,7 @@ def handler(job):
         f"be immediately recognizable and guessable by a child at first glance. "
         f"Use the following country context to ensure every visual detail — appearance, "
         f"colour, style, shape, and form — is accurate to how this word genuinely looks "
-        f"and exists in that country: {countryContext} "
+        f"and exists in that country"
         f"The prompt must follow these rules: "
         f"- Pure white background, subject isolated cleanly with no scene or environment. "
         f"- Single focused subject only, no clutter. "
