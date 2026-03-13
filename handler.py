@@ -20,12 +20,12 @@ def handler(job):
     prompt_text = (
         f"<s>[INST] "
         f"Create a detailed image generation prompt for representing {word} in the context "
-        f"of {category}, specifically focused for {country}. "
+        f"of {category}."
         f"The image is for an educational flashcard for school students. The subject must "
         f"be immediately recognizable and guessable by a child at first glance. "
-        f"Use the following country context to ensure every visual detail — appearance, "
-        f"colour, style, shape, and form — is accurate to how this word genuinely looks "
-        f"and exists in that country Don't overdo flags, patterns and colors - only where necessary, everyday items and common product might not need Pakistani colors or design, only things that are specific to Pkaistan need them, "
+        f"Use {country} context ONLY when the subject is something that genuinely looks different or unique in {country} compared to other countries — such as traditional clothing, cultural items, local food and cuisine, religious symbols, government or military uniforms, architecture, or nationally specific objects. "
+        f"For universal everyday items — such as body parts, furniture, school supplies, suitcases, electronics, vehicles, or common household objects — depict them in their standard, globally recognizable form, since they look the same everywhere including {country}. "
+        f"Do NOT force {country} flag colors, patterns, or cultural styling onto neutral universal objects. Ask yourself: would this object look noticeably different in {country} vs. any other country? If no — draw it universally. If yes — apply {country} context. "
         f"The prompt must follow these rules: "
         f"- Pure white background, subject isolated cleanly with no scene or environment. "
         f"- Single focused subject only, no clutter. "
@@ -35,7 +35,7 @@ def handler(job):
         f"- Flat front-facing or three-quarter view for maximum clarity. "
         f"- Illustration style, clean edges, even bright lighting. "
         f"- No shadows, no backgrounds, no extra objects unless part of the subject itself. "
-        f"Output only the image generation prompt, nothing else. No explanation, no preamble. and Don't Include Pakistani Flag or colors in everything, only where it is necessary!"
+        f"Output only the image generation prompt, nothing else. No explanation, no preamble. "
         f"[/INST]"
     )
 
