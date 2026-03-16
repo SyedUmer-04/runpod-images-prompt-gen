@@ -28,6 +28,8 @@ def handler(job):
         f"Do NOT force {country} flag colors, patterns, or cultural styling onto neutral universal objects. Ask yourself: would this object look noticeably different in {country} vs. any other country? If no — draw it universally. If yes — apply {country} context. "
         f"The prompt must follow these rules: "
         f"- Pure white background, subject isolated cleanly with no scene or environment. "
+        f"- Subject must be perfectly centered in the middle of the image. "            
+        f"- Centered composition, symmetrical framing. " 
         f"- Single focused subject only, no clutter. "
         f"- Bright, clear, saturated colours friendly for children. "
         f"- No text, labels, letters or numbers anywhere in the image. "
